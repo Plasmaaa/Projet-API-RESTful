@@ -1,0 +1,21 @@
+{
+  "name": "projet-api-restful",
+  "version": "1.0.0",
+  "description": "API RESTful de collection de jeux vidéo - MVC + Sequelize + SQLite",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^5.0.0",
+    "sequelize": "^6.32.1",
+    "sqlite3": "^5.1.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}

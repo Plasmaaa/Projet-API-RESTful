@@ -14,7 +14,6 @@ module.exports = (req, res, next) => {
     if (rating < 0 || rating > 10) return res.status(400).json({ error: 'Field "rating" must be between 0 and 10' });
   }
   if (releaseDate !== undefined && releaseDate !== null && releaseDate !== '') {
-    // simple YYYY-MM-DD check using validator's isDate
     if (!isDate(String(releaseDate))) return res.status(400).json({ error: 'Field "releaseDate" must be a valid date (YYYY-MM-DD)' });
   }
 

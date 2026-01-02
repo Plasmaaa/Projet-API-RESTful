@@ -1,6 +1,5 @@
 const { Game } = require('../models');
 
-// Create a new game
 exports.createGame = async (req, res, next) => {
   try {
     const data = req.body;
@@ -11,7 +10,6 @@ exports.createGame = async (req, res, next) => {
   }
 };
 
-// Get list of games with simple pagination and filters
 exports.getGames = async (req, res, next) => {
   try {
     const { page = 1, limit = 10, title, platform, genre, developer, rating_min, rating_max, sort } = req.query;
@@ -41,7 +39,6 @@ exports.getGames = async (req, res, next) => {
   }
 };
 
-// Get a single game by id
 exports.getGameById = async (req, res, next) => {
   try {
     const game = await Game.findByPk(req.params.id);
@@ -52,7 +49,6 @@ exports.getGameById = async (req, res, next) => {
   }
 };
 
-// Update a game
 exports.updateGame = async (req, res, next) => {
   try {
     const game = await Game.findByPk(req.params.id);
@@ -64,7 +60,6 @@ exports.updateGame = async (req, res, next) => {
   }
 };
 
-// Delete a game
 exports.deleteGame = async (req, res, next) => {
   try {
     const game = await Game.findByPk(req.params.id);
